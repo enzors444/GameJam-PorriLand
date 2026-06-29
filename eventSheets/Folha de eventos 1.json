@@ -202,6 +202,36 @@
 			"sid": 511111111111135
 		},
 		{
+			"eventType": "variable",
+			"name": "Porri_Puxado_UID",
+			"type": "number",
+			"initialValue": "-1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 930000000000001
+		},
+		{
+			"eventType": "variable",
+			"name": "Porri_Puxado_Offset_X",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 930000000000002
+		},
+		{
+			"eventType": "variable",
+			"name": "Porri_Puxado_Offset_Y",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 930000000000003
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Setup",
@@ -3144,6 +3174,16 @@
 									"id": "every-tick",
 									"objectClass": "System",
 									"sid": 334772967560973
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 930000000000200,
+									"parameters": {
+										"first-value": "Porri_Puxado_UID",
+										"comparison": 0,
+										"second-value": "-1"
+									}
 								}
 							],
 							"actions": [
@@ -3371,6 +3411,533 @@
 									"sid": 920000000000091
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 930000000000008,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "Porri´s"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 930000000000009,
+									"parameters": {
+										"first-value": "Poder_Selecionado",
+										"comparison": 0,
+										"second-value": "\"\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 930000000000010,
+									"parameters": {
+										"first-value": "Dilema_Ativo",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 930000000000011,
+									"parameters": {
+										"first-value": "Porri_Puxado_UID",
+										"comparison": 0,
+										"second-value": "-1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 930000000000012,
+									"parameters": {
+										"variable": "Porri_Puxado_UID",
+										"value": "Porri´s.UID"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 930000000000013,
+									"parameters": {
+										"variable": "Porri_Puxado_Offset_X",
+										"value": "Porri´s.X - Mouse.X(\"Game\")"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 930000000000014,
+									"parameters": {
+										"variable": "Porri_Puxado_Offset_Y",
+										"value": "Porri´s.Y - Mouse.Y(\"Game\")"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Porri´s",
+									"sid": 930000000000015,
+									"parameters": {
+										"instance-variable": "Direcao",
+										"value": "\"Parado\""
+									}
+								},
+								{
+									"id": "move-to-top",
+									"objectClass": "Porri´s",
+									"sid": 930000000000016
+								}
+							],
+							"children": [],
+							"sid": 930000000000100
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 930000000000017
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 930000000000018,
+									"parameters": {
+										"first-value": "Porri_Puxado_UID",
+										"comparison": 1,
+										"second-value": "-1"
+									}
+								},
+								{
+									"id": "object-uid-exists",
+									"objectClass": "System",
+									"sid": 930000000000019,
+									"parameters": {
+										"uid": "Porri_Puxado_UID"
+									}
+								},
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 930000000000020,
+									"parameters": {
+										"object": "Porri´s",
+										"expression": "Porri´s.UID",
+										"comparison": 0,
+										"value": "Porri_Puxado_UID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Porri´s",
+									"sid": 930000000000021,
+									"parameters": {
+										"x": "clamp(Mouse.X(\"Game\") + Porri_Puxado_Offset_X, 48, 1232)",
+										"y": "clamp(Mouse.Y(\"Game\") + Porri_Puxado_Offset_Y, 48, 672)"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Porri´s",
+									"sid": 930000000000022,
+									"parameters": {
+										"instance-variable": "Direcao",
+										"value": "\"Parado\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Porri´s",
+									"sid": 930000000000023,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "UI_Mouse",
+									"sid": 930000000000058,
+									"parameters": {
+										"x": "Mouse.X(\"UI\")",
+										"y": "Mouse.Y(\"UI\")"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "UI_Mouse",
+									"sid": 930000000000024,
+									"parameters": {
+										"animation": "\"Puxando\"",
+										"from": "current frame"
+									}
+								}
+							],
+							"children": [],
+							"sid": 930000000000101
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 930000000000025
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 930000000000026,
+									"parameters": {
+										"first-value": "Porri_Puxado_UID",
+										"comparison": 1,
+										"second-value": "-1"
+									}
+								},
+								{
+									"id": "mouse-button-is-down",
+									"objectClass": "Mouse",
+									"sid": 930000000000027,
+									"parameters": {
+										"mouse-button": "left"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "object-uid-exists",
+									"objectClass": "System",
+									"sid": 930000000000028,
+									"parameters": {
+										"uid": "Porri_Puxado_UID"
+									}
+								},
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 930000000000029,
+									"parameters": {
+										"object": "Porri´s",
+										"expression": "Porri´s.UID",
+										"comparison": 0,
+										"value": "Porri_Puxado_UID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Porri´s",
+									"sid": 930000000000030,
+									"parameters": {
+										"instance-variable": "Direcao",
+										"value": "\"Parado\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Porri´s",
+									"sid": 930000000000104,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 930000000000031,
+									"parameters": {
+										"variable": "Porri_Puxado_UID",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 930000000000032,
+									"parameters": {
+										"variable": "Porri_Puxado_Offset_X",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 930000000000033,
+									"parameters": {
+										"variable": "Porri_Puxado_Offset_Y",
+										"value": "0"
+									}
+								}
+							],
+							"children": [],
+							"sid": 930000000000102
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 930000000000034
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 930000000000035,
+									"parameters": {
+										"first-value": "Porri_Puxado_UID",
+										"comparison": 1,
+										"second-value": "-1"
+									}
+								},
+								{
+									"id": "object-uid-exists",
+									"objectClass": "System",
+									"sid": 930000000000036,
+									"parameters": {
+										"uid": "Porri_Puxado_UID"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 930000000000037,
+									"parameters": {
+										"variable": "Porri_Puxado_UID",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 930000000000038,
+									"parameters": {
+										"variable": "Porri_Puxado_Offset_X",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 930000000000039,
+									"parameters": {
+										"variable": "Porri_Puxado_Offset_Y",
+										"value": "0"
+									}
+								}
+							],
+							"children": [],
+							"sid": 930000000000103
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 930000000000040
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 930000000000041,
+									"parameters": {
+										"first-value": "Porri_Puxado_UID",
+										"comparison": 1,
+										"second-value": "-1"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 930000000000042,
+									"parameters": {
+										"first-value": "Poder_Selecionado",
+										"comparison": 1,
+										"second-value": "\"\""
+									}
+								},
+								{
+									"id": "object-uid-exists",
+									"objectClass": "System",
+									"sid": 930000000000043,
+									"parameters": {
+										"uid": "Porri_Puxado_UID"
+									}
+								},
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 930000000000044,
+									"parameters": {
+										"object": "Porri´s",
+										"expression": "Porri´s.UID",
+										"comparison": 0,
+										"value": "Porri_Puxado_UID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Porri´s",
+									"sid": 930000000000045,
+									"parameters": {
+										"instance-variable": "Direcao",
+										"value": "\"Parado\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Porri´s",
+									"sid": 930000000000105,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 930000000000046,
+									"parameters": {
+										"variable": "Porri_Puxado_UID",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 930000000000047,
+									"parameters": {
+										"variable": "Porri_Puxado_Offset_X",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 930000000000048,
+									"parameters": {
+										"variable": "Porri_Puxado_Offset_Y",
+										"value": "0"
+									}
+								}
+							],
+							"children": [],
+							"sid": 930000000000104
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 930000000000049
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 930000000000050,
+									"parameters": {
+										"first-value": "Porri_Puxado_UID",
+										"comparison": 1,
+										"second-value": "-1"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 930000000000051,
+									"parameters": {
+										"first-value": "Dilema_Ativo",
+										"comparison": 1,
+										"second-value": "0"
+									}
+								},
+								{
+									"id": "object-uid-exists",
+									"objectClass": "System",
+									"sid": 930000000000052,
+									"parameters": {
+										"uid": "Porri_Puxado_UID"
+									}
+								},
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 930000000000053,
+									"parameters": {
+										"object": "Porri´s",
+										"expression": "Porri´s.UID",
+										"comparison": 0,
+										"value": "Porri_Puxado_UID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Porri´s",
+									"sid": 930000000000054,
+									"parameters": {
+										"instance-variable": "Direcao",
+										"value": "\"Parado\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Porri´s",
+									"sid": 930000000000106,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 930000000000055,
+									"parameters": {
+										"variable": "Porri_Puxado_UID",
+										"value": "-1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 930000000000056,
+									"parameters": {
+										"variable": "Porri_Puxado_Offset_X",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 930000000000057,
+									"parameters": {
+										"variable": "Porri_Puxado_Offset_Y",
+										"value": "0"
+									}
+								}
+							],
+							"children": [],
+							"sid": 930000000000105
 						}
 					],
 					"sid": 325745008212634
