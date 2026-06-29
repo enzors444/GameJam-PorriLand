@@ -1,0 +1,134 @@
+{
+	"name": "btn_Poderes",
+	"plugin-id": "Sprite",
+	"sid": 984550394126269,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "idPoder",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 303287684114066
+		},
+		{
+			"name": "eraDesbloqueio",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 513033660861979
+		},
+		{
+			"name": "cd",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 483836740028123
+		},
+		{
+			"name": "cdMax",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 490560190963880
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 68,
+						"height": 68,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 252384,
+						"collisionPoly": {
+							"points": [
+								0.058823529411764705,
+								0.014705882352941164,
+								0.9411764705882353,
+								0.014705882352941164,
+								0.9852941176470589,
+								0.058823529411764705,
+								0.9852941176470589,
+								0.9411764705882353,
+								0.9411764705882353,
+								0.9852941176470589,
+								0.058823529411764705,
+								0.9852941176470589,
+								0.014705882352941176,
+								0.9411764705882353,
+								0.014705882352941176,
+								0.058823529411764705
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 921878003360756,
+				"name": "Relampago",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 68,
+						"height": 68,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9510071,
+						"collisionPoly": {
+							"points": [
+								0.058823529411764705,
+								0.014705882352941176,
+								0.9411764705882353,
+								0.014705882352941176,
+								0.9852941176470589,
+								0.058823529411764705,
+								0.9852941176470589,
+								0.9411764705882353,
+								0.9411764705882353,
+								0.9852941176470589,
+								0.058823529411764705,
+								0.9852941176470589,
+								0.014705882352941176,
+								0.9411764705882353,
+								0.014705882352941176,
+								0.058823529411764705
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 860333100841153,
+				"name": "Sussurro",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

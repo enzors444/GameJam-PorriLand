@@ -1,0 +1,96 @@
+{
+	"name": "Porri´s",
+	"plugin-id": "Sprite",
+	"sid": 526191606338489,
+	"instanceVariables": [
+		{
+			"name": "Direcao",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 454876267840024
+		},
+		{
+			"name": "Felicidade",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 278334364498396
+		},
+		{
+			"name": "Tempo_Sem_Trauma",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 392790167732157
+		},
+		{
+			"name": "Pedido_Secreto",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 378249635927131
+		},
+		{
+			"name": "Ultimo_X",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 511111111111133
+		},
+		{
+			"name": "Ultimo_Y",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 511111111111134
+		},
+		{
+			"name": "Altura_Padrão",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 778363195559018
+		},
+		{
+			"name": "Largura_Padrão",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 617303081471545
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "bound",
+			"name": "RestritoAoLayout",
+			"sid": 987103267556356
+		},
+		{
+			"behaviorId": "TileMovement",
+			"name": "MovimentoEmGrid",
+			"sid": 163887259112938
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Cronômetro",
+			"sid": 764197601332136
+		},
+		{
+			"behaviorId": "LOS",
+			"name": "CampoDeVisão",
+			"sid": 840317462785427
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Sólido",
+			"sid": 708480977783534
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"Porri_Adepto",
+		"Porri_Fanatico",
+		"Porri_Cetico"
+	]
+}

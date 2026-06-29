@@ -1,0 +1,52 @@
+{
+	"name": "UI_Interior",
+	"plugin-id": "Sprite",
+	"sid": 109112828788563,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 251,
+						"height": 84,
+						"originX": 0,
+						"originY": 0.47619047619047616,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4509585,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.9960159362549801,
+								0,
+								0.9960159362549801,
+								1,
+								0,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 302833298683007,
+				"name": "Interior",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}
