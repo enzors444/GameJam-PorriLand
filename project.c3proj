@@ -125,7 +125,8 @@
 			"sf_Dilema_Titulo",
 			"sf_Dilema_Corpo",
 			"sf_Dilema_Efeitos",
-			"sf_Objetivos"
+			"sf_Objetivos",
+			"Furacao"
 		],
 		"subfolders": []
 	},
@@ -241,12 +242,7 @@
 		"items": [
 			"Linha do tempo 1"
 		],
-		"subfolders": [
-			{
-				"items": [],
-				"subfolders": []
-			}
-		]
+		"subfolders": []
 	},
 	"flowcharts": {
 		"items": [
@@ -315,5 +311,5 @@
 	},
 	"viewportWidth": 1280,
 	"viewportHeight": 720,
-	"firstLayout": null
+	"firstLayout": "Layout 1"
 }
