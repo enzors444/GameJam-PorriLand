@@ -5578,10 +5578,59 @@
             {
               "id": "set-eventvar-value",
               "objectClass": "System",
-              "sid": 200000000000075,
+              "sid": 990000000000061,
               "parameters": {
-                "variable": "Era",
-                "value": "4"
+                "variable": "Dilema_Ativo",
+                "value": "1"
+              }
+            },
+            {
+              "id": "set-time-scale",
+              "objectClass": "System",
+              "sid": 990000000000062,
+              "parameters": {
+                "time-scale": "0"
+              }
+            },
+            {
+              "id": "set-visible",
+              "objectClass": "Filtro_Dilema",
+              "sid": 990000000000063,
+              "parameters": {
+                "visibility": "visible"
+              }
+            },
+            {
+              "id": "set-visible",
+              "objectClass": "Painel_Dilema",
+              "sid": 990000000000064,
+              "parameters": {
+                "visibility": "visible"
+              }
+            },
+            {
+              "id": "set-visible",
+              "objectClass": "btn_Dilema_Sim",
+              "sid": 990000000000065,
+              "parameters": {
+                "visibility": "invisible"
+              }
+            },
+            {
+              "id": "set-visible",
+              "objectClass": "btn_Dilema_Nao",
+              "sid": 990000000000066,
+              "parameters": {
+                "visibility": "invisible"
+              }
+            },
+            {
+              "id": "set-eventvar-value",
+              "objectClass": "System",
+              "sid": 990000000000067,
+              "parameters": {
+                "variable": "Dilema_Tipo",
+                "value": "\"Final\""
               }
             },
             {
@@ -5610,7 +5659,257 @@
               }
             }
           ],
-          "sid": 200000000000079
+          "sid": 200000000000079,
+          "children": [
+            {
+              "eventType": "block",
+              "sid": 990000000000070,
+              "conditions": [
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000071,
+                  "parameters": {
+                    "first-value": "Fe",
+                    "comparison": 3,
+                    "second-value": "75"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000095,
+                  "parameters": {
+                    "first-value": "Final_Definido",
+                    "comparison": 0,
+                    "second-value": "0"
+                  }
+                }
+              ],
+              "actions": [
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Titulo",
+                  "sid": 990000000000072,
+                  "parameters": {
+                    "text": "\"O DEUS VIVO\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Corpo",
+                  "sid": 990000000000073,
+                  "parameters": {
+                    "text": "\"Eles construíram uma estátua. Você não pediu e não consegue fazer eles pararem. Rezam para alguma versão de você que você não reconhece.\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Efeitos",
+                  "sid": 990000000000074,
+                  "parameters": {
+                    "text": "\"\""
+                  }
+                }
+              ]
+            },
+            {
+              "eventType": "block",
+              "sid": 990000000000075,
+              "conditions": [
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000076,
+                  "parameters": {
+                    "first-value": "Fe",
+                    "comparison": 2,
+                    "second-value": "45"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000096,
+                  "parameters": {
+                    "first-value": "Final_Definido",
+                    "comparison": 0,
+                    "second-value": "0"
+                  }
+                }
+              ],
+              "actions": [
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Titulo",
+                  "sid": 990000000000077,
+                  "parameters": {
+                    "text": "\"A PARTIDA\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Corpo",
+                  "sid": 990000000000078,
+                  "parameters": {
+                    "text": "\"Seu templo virou depósito. Ninguém entrou para quebrar nada, só pararam de aparecer. O povo está bem. Você que não está.\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Efeitos",
+                  "sid": 990000000000079,
+                  "parameters": {
+                    "text": "\"\""
+                  }
+                }
+              ]
+            },
+            {
+              "eventType": "block",
+              "sid": 990000000000080,
+              "conditions": [
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000081,
+                  "parameters": {
+                    "first-value": "Fe",
+                    "comparison": 5,
+                    "second-value": "45"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000082,
+                  "parameters": {
+                    "first-value": "Fe",
+                    "comparison": 4,
+                    "second-value": "75"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000083,
+                  "parameters": {
+                    "first-value": "Karma",
+                    "comparison": 4,
+                    "second-value": "-3"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000097,
+                  "parameters": {
+                    "first-value": "Final_Definido",
+                    "comparison": 0,
+                    "second-value": "0"
+                  }
+                }
+              ],
+              "actions": [
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Titulo",
+                  "sid": 990000000000084,
+                  "parameters": {
+                    "text": "\"O SENHOR\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Corpo",
+                  "sid": 990000000000085,
+                  "parameters": {
+                    "text": "\"Eles obedecem. Fazem festa no seu nome, cantam as músicas certas. Os olhos não acompanham.\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Efeitos",
+                  "sid": 990000000000086,
+                  "parameters": {
+                    "text": "\"\""
+                  }
+                }
+              ]
+            },
+            {
+              "eventType": "block",
+              "sid": 990000000000087,
+              "conditions": [
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000088,
+                  "parameters": {
+                    "first-value": "Fe",
+                    "comparison": 5,
+                    "second-value": "45"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000089,
+                  "parameters": {
+                    "first-value": "Fe",
+                    "comparison": 4,
+                    "second-value": "75"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000090,
+                  "parameters": {
+                    "first-value": "Karma",
+                    "comparison": 3,
+                    "second-value": "-3"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000098,
+                  "parameters": {
+                    "first-value": "Final_Definido",
+                    "comparison": 0,
+                    "second-value": "0"
+                  }
+                }
+              ],
+              "actions": [
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Titulo",
+                  "sid": 990000000000091,
+                  "parameters": {
+                    "text": "\"O PASTOR\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Corpo",
+                  "sid": 990000000000092,
+                  "parameters": {
+                    "text": "\"Eles acordam. Fizeram filhos, enterraram os mortos. Ainda acendem a vela. Não perguntam mais por você.\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Efeitos",
+                  "sid": 990000000000093,
+                  "parameters": {
+                    "text": "\"\""
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
           "eventType": "block",
@@ -6262,10 +6561,59 @@
             {
               "id": "set-eventvar-value",
               "objectClass": "System",
-              "sid": 200000000000075,
+              "sid": 990000000000061,
               "parameters": {
-                "variable": "Era",
-                "value": "4"
+                "variable": "Dilema_Ativo",
+                "value": "1"
+              }
+            },
+            {
+              "id": "set-time-scale",
+              "objectClass": "System",
+              "sid": 990000000000062,
+              "parameters": {
+                "time-scale": "0"
+              }
+            },
+            {
+              "id": "set-visible",
+              "objectClass": "Filtro_Dilema",
+              "sid": 990000000000063,
+              "parameters": {
+                "visibility": "visible"
+              }
+            },
+            {
+              "id": "set-visible",
+              "objectClass": "Painel_Dilema",
+              "sid": 990000000000064,
+              "parameters": {
+                "visibility": "visible"
+              }
+            },
+            {
+              "id": "set-visible",
+              "objectClass": "btn_Dilema_Sim",
+              "sid": 990000000000065,
+              "parameters": {
+                "visibility": "invisible"
+              }
+            },
+            {
+              "id": "set-visible",
+              "objectClass": "btn_Dilema_Nao",
+              "sid": 990000000000066,
+              "parameters": {
+                "visibility": "invisible"
+              }
+            },
+            {
+              "id": "set-eventvar-value",
+              "objectClass": "System",
+              "sid": 990000000000067,
+              "parameters": {
+                "variable": "Dilema_Tipo",
+                "value": "\"Final\""
               }
             },
             {
@@ -6294,7 +6642,257 @@
               }
             }
           ],
-          "sid": 200000000000079
+          "sid": 200000000000079,
+          "children": [
+            {
+              "eventType": "block",
+              "sid": 990000000000070,
+              "conditions": [
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000071,
+                  "parameters": {
+                    "first-value": "Fe",
+                    "comparison": 3,
+                    "second-value": "75"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000095,
+                  "parameters": {
+                    "first-value": "Final_Definido",
+                    "comparison": 0,
+                    "second-value": "0"
+                  }
+                }
+              ],
+              "actions": [
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Titulo",
+                  "sid": 990000000000072,
+                  "parameters": {
+                    "text": "\"O DEUS VIVO\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Corpo",
+                  "sid": 990000000000073,
+                  "parameters": {
+                    "text": "\"Eles construíram uma estátua. Você não pediu e não consegue fazer eles pararem. Rezam para alguma versão de você que você não reconhece.\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Efeitos",
+                  "sid": 990000000000074,
+                  "parameters": {
+                    "text": "\"\""
+                  }
+                }
+              ]
+            },
+            {
+              "eventType": "block",
+              "sid": 990000000000075,
+              "conditions": [
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000076,
+                  "parameters": {
+                    "first-value": "Fe",
+                    "comparison": 2,
+                    "second-value": "45"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000096,
+                  "parameters": {
+                    "first-value": "Final_Definido",
+                    "comparison": 0,
+                    "second-value": "0"
+                  }
+                }
+              ],
+              "actions": [
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Titulo",
+                  "sid": 990000000000077,
+                  "parameters": {
+                    "text": "\"A PARTIDA\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Corpo",
+                  "sid": 990000000000078,
+                  "parameters": {
+                    "text": "\"Seu templo virou depósito. Ninguém entrou para quebrar nada, só pararam de aparecer. O povo está bem. Você que não está.\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Efeitos",
+                  "sid": 990000000000079,
+                  "parameters": {
+                    "text": "\"\""
+                  }
+                }
+              ]
+            },
+            {
+              "eventType": "block",
+              "sid": 990000000000080,
+              "conditions": [
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000081,
+                  "parameters": {
+                    "first-value": "Fe",
+                    "comparison": 5,
+                    "second-value": "45"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000082,
+                  "parameters": {
+                    "first-value": "Fe",
+                    "comparison": 4,
+                    "second-value": "75"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000083,
+                  "parameters": {
+                    "first-value": "Karma",
+                    "comparison": 4,
+                    "second-value": "-3"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000097,
+                  "parameters": {
+                    "first-value": "Final_Definido",
+                    "comparison": 0,
+                    "second-value": "0"
+                  }
+                }
+              ],
+              "actions": [
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Titulo",
+                  "sid": 990000000000084,
+                  "parameters": {
+                    "text": "\"O SENHOR\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Corpo",
+                  "sid": 990000000000085,
+                  "parameters": {
+                    "text": "\"Eles obedecem. Fazem festa no seu nome, cantam as músicas certas. Os olhos não acompanham.\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Efeitos",
+                  "sid": 990000000000086,
+                  "parameters": {
+                    "text": "\"\""
+                  }
+                }
+              ]
+            },
+            {
+              "eventType": "block",
+              "sid": 990000000000087,
+              "conditions": [
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000088,
+                  "parameters": {
+                    "first-value": "Fe",
+                    "comparison": 5,
+                    "second-value": "45"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000089,
+                  "parameters": {
+                    "first-value": "Fe",
+                    "comparison": 4,
+                    "second-value": "75"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000090,
+                  "parameters": {
+                    "first-value": "Karma",
+                    "comparison": 3,
+                    "second-value": "-3"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000098,
+                  "parameters": {
+                    "first-value": "Final_Definido",
+                    "comparison": 0,
+                    "second-value": "0"
+                  }
+                }
+              ],
+              "actions": [
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Titulo",
+                  "sid": 990000000000091,
+                  "parameters": {
+                    "text": "\"O PASTOR\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Corpo",
+                  "sid": 990000000000092,
+                  "parameters": {
+                    "text": "\"Eles acordam. Fizeram filhos, enterraram os mortos. Ainda acendem a vela. Não perguntam mais por você.\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Efeitos",
+                  "sid": 990000000000093,
+                  "parameters": {
+                    "text": "\"\""
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
           "eventType": "block",
@@ -6946,10 +7544,59 @@
             {
               "id": "set-eventvar-value",
               "objectClass": "System",
-              "sid": 200000000000075,
+              "sid": 990000000000061,
               "parameters": {
-                "variable": "Era",
-                "value": "4"
+                "variable": "Dilema_Ativo",
+                "value": "1"
+              }
+            },
+            {
+              "id": "set-time-scale",
+              "objectClass": "System",
+              "sid": 990000000000062,
+              "parameters": {
+                "time-scale": "0"
+              }
+            },
+            {
+              "id": "set-visible",
+              "objectClass": "Filtro_Dilema",
+              "sid": 990000000000063,
+              "parameters": {
+                "visibility": "visible"
+              }
+            },
+            {
+              "id": "set-visible",
+              "objectClass": "Painel_Dilema",
+              "sid": 990000000000064,
+              "parameters": {
+                "visibility": "visible"
+              }
+            },
+            {
+              "id": "set-visible",
+              "objectClass": "btn_Dilema_Sim",
+              "sid": 990000000000065,
+              "parameters": {
+                "visibility": "invisible"
+              }
+            },
+            {
+              "id": "set-visible",
+              "objectClass": "btn_Dilema_Nao",
+              "sid": 990000000000066,
+              "parameters": {
+                "visibility": "invisible"
+              }
+            },
+            {
+              "id": "set-eventvar-value",
+              "objectClass": "System",
+              "sid": 990000000000067,
+              "parameters": {
+                "variable": "Dilema_Tipo",
+                "value": "\"Final\""
               }
             },
             {
@@ -6978,7 +7625,257 @@
               }
             }
           ],
-          "sid": 200000000000079
+          "sid": 200000000000079,
+          "children": [
+            {
+              "eventType": "block",
+              "sid": 990000000000070,
+              "conditions": [
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000071,
+                  "parameters": {
+                    "first-value": "Fe",
+                    "comparison": 3,
+                    "second-value": "75"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000095,
+                  "parameters": {
+                    "first-value": "Final_Definido",
+                    "comparison": 0,
+                    "second-value": "0"
+                  }
+                }
+              ],
+              "actions": [
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Titulo",
+                  "sid": 990000000000072,
+                  "parameters": {
+                    "text": "\"O DEUS VIVO\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Corpo",
+                  "sid": 990000000000073,
+                  "parameters": {
+                    "text": "\"Eles construíram uma estátua. Você não pediu e não consegue fazer eles pararem. Rezam para alguma versão de você que você não reconhece.\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Efeitos",
+                  "sid": 990000000000074,
+                  "parameters": {
+                    "text": "\"\""
+                  }
+                }
+              ]
+            },
+            {
+              "eventType": "block",
+              "sid": 990000000000075,
+              "conditions": [
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000076,
+                  "parameters": {
+                    "first-value": "Fe",
+                    "comparison": 2,
+                    "second-value": "45"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000096,
+                  "parameters": {
+                    "first-value": "Final_Definido",
+                    "comparison": 0,
+                    "second-value": "0"
+                  }
+                }
+              ],
+              "actions": [
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Titulo",
+                  "sid": 990000000000077,
+                  "parameters": {
+                    "text": "\"A PARTIDA\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Corpo",
+                  "sid": 990000000000078,
+                  "parameters": {
+                    "text": "\"Seu templo virou depósito. Ninguém entrou para quebrar nada, só pararam de aparecer. O povo está bem. Você que não está.\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Efeitos",
+                  "sid": 990000000000079,
+                  "parameters": {
+                    "text": "\"\""
+                  }
+                }
+              ]
+            },
+            {
+              "eventType": "block",
+              "sid": 990000000000080,
+              "conditions": [
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000081,
+                  "parameters": {
+                    "first-value": "Fe",
+                    "comparison": 5,
+                    "second-value": "45"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000082,
+                  "parameters": {
+                    "first-value": "Fe",
+                    "comparison": 4,
+                    "second-value": "75"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000083,
+                  "parameters": {
+                    "first-value": "Karma",
+                    "comparison": 4,
+                    "second-value": "-3"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000097,
+                  "parameters": {
+                    "first-value": "Final_Definido",
+                    "comparison": 0,
+                    "second-value": "0"
+                  }
+                }
+              ],
+              "actions": [
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Titulo",
+                  "sid": 990000000000084,
+                  "parameters": {
+                    "text": "\"O SENHOR\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Corpo",
+                  "sid": 990000000000085,
+                  "parameters": {
+                    "text": "\"Eles obedecem. Fazem festa no seu nome, cantam as músicas certas. Os olhos não acompanham.\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Efeitos",
+                  "sid": 990000000000086,
+                  "parameters": {
+                    "text": "\"\""
+                  }
+                }
+              ]
+            },
+            {
+              "eventType": "block",
+              "sid": 990000000000087,
+              "conditions": [
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000088,
+                  "parameters": {
+                    "first-value": "Fe",
+                    "comparison": 5,
+                    "second-value": "45"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000089,
+                  "parameters": {
+                    "first-value": "Fe",
+                    "comparison": 4,
+                    "second-value": "75"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000090,
+                  "parameters": {
+                    "first-value": "Karma",
+                    "comparison": 3,
+                    "second-value": "-3"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000098,
+                  "parameters": {
+                    "first-value": "Final_Definido",
+                    "comparison": 0,
+                    "second-value": "0"
+                  }
+                }
+              ],
+              "actions": [
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Titulo",
+                  "sid": 990000000000091,
+                  "parameters": {
+                    "text": "\"O PASTOR\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Corpo",
+                  "sid": 990000000000092,
+                  "parameters": {
+                    "text": "\"Eles acordam. Fizeram filhos, enterraram os mortos. Ainda acendem a vela. Não perguntam mais por você.\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Efeitos",
+                  "sid": 990000000000093,
+                  "parameters": {
+                    "text": "\"\""
+                  }
+                }
+              ]
+            }
+          ]
         }
       ],
       "sid": 721794732464386
