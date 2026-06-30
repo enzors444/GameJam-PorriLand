@@ -9885,6 +9885,193 @@
 								}
 							],
 							"sid": 870521483944676
+						},
+						{
+							"eventType": "block",
+							"sid": 998291389101712,
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 998291389101713,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "Porri_Adepto"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 998291389101714,
+									"parameters": {
+										"first-value": "Dilema_Acao_Pendente",
+										"comparison": 0,
+										"second-value": "\"\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 998291389101715,
+									"parameters": {
+										"first-value": "Poder_Selecionado",
+										"comparison": 0,
+										"second-value": "\"Raio\""
+									}
+								},
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 998291389101716,
+									"parameters": {
+										"object": "btn_Poderes",
+										"expression": "btn_Poderes.idPoder",
+										"comparison": 0,
+										"value": "Poder_Selecionado"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "btn_Poderes",
+									"sid": 998291389101717,
+									"parameters": {
+										"instance-variable": "cd",
+										"comparison": 3,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 998291389101718,
+									"parameters": {
+										"first-value": "Era",
+										"comparison": 5,
+										"second-value": "btn_Poderes.eraDesbloqueio"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 998291389101719,
+									"parameters": {
+										"object-to-create": "Raio",
+										"layer": "1",
+										"x": "Porri_Adepto.X",
+										"y": "Porri_Adepto.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "Raio",
+									"sid": 998291389101720,
+									"parameters": {
+										"width": "96",
+										"height": "96"
+									}
+								},
+								{
+									"id": "move-to-top",
+									"objectClass": "Raio",
+									"sid": 998291389101721,
+									"parameters": {}
+								},
+								{
+									"id": "start-timer",
+									"objectClass": "Raio",
+									"sid": 998291389101722,
+									"parameters": {
+										"duration": "0.35",
+										"type": "once",
+										"tag": "\"VFX\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 998291389101723,
+									"parameters": {
+										"variable": "Fe",
+										"value": "clamp(Fe + 15, 0, 100)"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 998291389101724,
+									"parameters": {
+										"variable": "Karma",
+										"value": "Karma - 5"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 998291389101725,
+									"parameters": {
+										"variable": "Mortes",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 998291389101726,
+									"parameters": {
+										"variable": "Raio_Nunca_Adepto",
+										"value": "0"
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 998291389101727,
+									"parameters": {
+										"object-to-create": "Porri_Cetico",
+										"layer": "1",
+										"x": "Porri_Adepto.X",
+										"y": "Porri_Adepto.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Porri_Adepto",
+									"sid": 998291389101728,
+									"parameters": {}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "btn_Poderes",
+									"sid": 998291389101729,
+									"parameters": {
+										"instance-variable": "cd",
+										"value": "btn_Poderes.cdMax"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 998291389101730,
+									"parameters": {
+										"variable": "Poder_Selecionado",
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Borda_Poder",
+									"sid": 998291389101731,
+									"parameters": {}
+								}
+							],
+							"children": []
 						}
 					],
 					"sid": 952786311894588
