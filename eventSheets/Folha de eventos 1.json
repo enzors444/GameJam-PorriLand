@@ -9989,7 +9989,8 @@
 										"duration": "0.35",
 										"type": "once",
 										"tag": "\"VFX\""
-									}
+									},
+									"behaviorType": "Cronômetro"
 								},
 								{
 									"id": "set-eventvar-value",
@@ -10064,20 +10065,9 @@
 									"sid": 998291389101800,
 									"conditions": [
 										{
-											"id": "pick-by-comparison",
-											"objectClass": "System",
-											"sid": 998291389101801,
-											"parameters": {
-												"object": "Porri_Adepto",
-												"expression": "distance(Porri_Adepto.X, Porri_Adepto.Y, Raio.X, Raio.Y)",
-												"comparison": 3,
-												"value": "150"
-											}
-										},
-										{
 											"id": "pick-nearestfurthest",
 											"objectClass": "Porri_Adepto",
-											"sid": 998291389101802,
+											"sid": 998291389101801,
 											"parameters": {
 												"which": "nearest",
 												"x": "Raio.X",
@@ -10090,7 +10080,7 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 998291389101803,
+											"sid": 998291389101802,
 											"parameters": {
 												"object-to-create": "Porri_Cetico",
 												"layer": "1",
@@ -10103,11 +10093,10 @@
 										{
 											"id": "destroy",
 											"objectClass": "Porri_Adepto",
-											"sid": 998291389101804,
+											"sid": 998291389101803,
 											"parameters": {}
 										}
-									],
-									"children": []
+									]
 								}
 							]
 						}
