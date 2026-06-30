@@ -312,6 +312,16 @@
 			"sid": 930000000000003
 		},
 		{
+			"eventType": "variable",
+			"name": "MinFelix_Raio",
+			"type": "number",
+			"initialValue": "101",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 998291389101820
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Setup",
@@ -9993,6 +10003,17 @@
 									"behaviorType": "Cronômetro"
 								},
 								{
+									"id": "start-timer",
+									"objectClass": "Raio",
+									"sid": 998291389101821,
+									"parameters": {
+										"duration": "0.001",
+										"type": "once",
+										"tag": "\"ConverteCetico\""
+									},
+									"behaviorType": "Cronômetro"
+								},
+								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
 									"sid": 998291389101723,
@@ -10059,46 +10080,7 @@
 									"parameters": {}
 								}
 							],
-							"children": [
-								{
-									"eventType": "block",
-									"sid": 998291389101800,
-									"conditions": [
-										{
-											"id": "pick-nearestfurthest",
-											"objectClass": "Porri_Adepto",
-											"sid": 998291389101801,
-											"parameters": {
-												"which": "nearest",
-												"x": "Raio.X",
-												"y": "Raio.Y",
-												"pick-all-tied": false
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "create-object",
-											"objectClass": "System",
-											"sid": 998291389101802,
-											"parameters": {
-												"object-to-create": "Porri_Cetico",
-												"layer": "1",
-												"x": "Porri_Adepto.X",
-												"y": "Porri_Adepto.Y",
-												"create-hierarchy": false,
-												"template-name": "\"\""
-											}
-										},
-										{
-											"id": "destroy",
-											"objectClass": "Porri_Adepto",
-											"sid": 998291389101803,
-											"parameters": {}
-										}
-									]
-								}
-							]
+							"children": []
 						}
 					],
 					"sid": 952786311894588
@@ -10285,6 +10267,147 @@
 								}
 							],
 							"sid": 121071426843184
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-timer",
+									"objectClass": "Raio",
+									"sid": 998291389101822,
+									"behaviorType": "Cronômetro",
+									"parameters": {
+										"tag": "\"ConverteCetico\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 998291389101823,
+									"parameters": {
+										"variable": "MinFelix_Raio",
+										"value": "101"
+									}
+								}
+							],
+							"children": [
+								{
+									"eventType": "block",
+									"sid": 998291389101824,
+									"conditions": [
+										{
+											"id": "pick-by-comparison",
+											"objectClass": "System",
+											"sid": 998291389101825,
+											"parameters": {
+												"object": "Porri_Adepto",
+												"expression": "distance(Porri_Adepto.X, Porri_Adepto.Y, Raio.X, Raio.Y)",
+												"comparison": 3,
+												"value": "150"
+											}
+										}
+									],
+									"actions": [],
+									"children": [
+										{
+											"eventType": "block",
+											"sid": 998291389101826,
+											"conditions": [
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 998291389101827,
+													"parameters": {
+														"object": "Porri_Adepto"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 998291389101828,
+													"parameters": {
+														"variable": "MinFelix_Raio",
+														"value": "min(MinFelix_Raio, Porri_Adepto.Felicidade)"
+													}
+												}
+											]
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"sid": 998291389101829,
+									"conditions": [
+										{
+											"id": "pick-by-comparison",
+											"objectClass": "System",
+											"sid": 998291389101830,
+											"parameters": {
+												"object": "Porri_Adepto",
+												"expression": "distance(Porri_Adepto.X, Porri_Adepto.Y, Raio.X, Raio.Y)",
+												"comparison": 3,
+												"value": "150"
+											}
+										},
+										{
+											"id": "pick-by-comparison",
+											"objectClass": "System",
+											"sid": 998291389101831,
+											"parameters": {
+												"object": "Porri_Adepto",
+												"expression": "Porri_Adepto.Felicidade",
+												"comparison": 0,
+												"value": "MinFelix_Raio"
+											}
+										},
+										{
+											"id": "pick-random-instance",
+											"objectClass": "System",
+											"sid": 998291389101832,
+											"parameters": {
+												"object": "Porri_Adepto"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 998291389101833,
+											"parameters": {
+												"object-to-create": "Porri_Cetico",
+												"layer": "1",
+												"x": "Porri_Adepto.X",
+												"y": "Porri_Adepto.Y",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "start-timer",
+											"objectClass": "Porri_Cetico",
+											"sid": 998291389101834,
+											"behaviorType": "Cronômetro",
+											"parameters": {
+												"duration": "random(0.5,2.5)",
+												"type": "regular",
+												"tag": "\"Andar\""
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "Porri_Adepto",
+											"sid": 998291389101835,
+											"parameters": {}
+										}
+									]
+								}
+							],
+							"sid": 998291389101836
 						},
 						{
 							"eventType": "block",
