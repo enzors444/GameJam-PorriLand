@@ -312,7 +312,7 @@
 						],
 						"horizontal-alignment": "center",
 						"vertical-alignment": "top",
-						"wrapping": "none",
+						"wrapping": "word",
 						"text-direction": "ltr",
 						"icon-set": -1,
 						"initially-visible": true,
