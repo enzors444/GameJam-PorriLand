@@ -154,35 +154,35 @@ Antes do final normal, surge dilema especial único:
 - NÃO → cai para Final Equilíbrio
 
 **Texto do final secreto:**
-> *"Você desceu. Não como punição — como presente. Seu povo nunca soube que o estranho entre eles era o deus que os criou. E isso foi suficiente."*
+> *"Você desceu sem anunciar. Viveu entre eles, morreu entre eles. Eles nunca souberam que foi você."*
 
 ---
 
 **2. Fanatismo — "O Deus Vivo"**
 Condição: `Fe > 75` ao completar Era 3
 
-> *"O poder era grande demais. Seus fiéis te devoram — e sorriem enquanto o fazem."*
+> *"Eles construíram uma estátua. Você não pediu e não consegue fazer eles pararem. Rezam para alguma versão de você que você não reconhece."*
 
 ---
 
 **3. Ceticismo — "A Partida"**
 Condição: `Fe < 45` ao completar Era 3
 
-> *"Seu povo seguiu em frente. Talvez nunca precisasse de ti. Talvez isso seja a maior vitória."*
+> *"Seu templo virou depósito. Ninguém entrou para quebrar nada, só pararam de aparecer. O povo está bem. Você que não está."*
 
 ---
 
 **4. Tirania Divina — "O Senhor"**
 Condição: `Fe` entre 45–75 + `Karma ≤ −3`
 
-> *"Você governa, mas não guia. A fé virou corrente. Eles obedecem — e odeiam em silêncio."*
+> *"Eles obedecem. Fazem festa no seu nome, cantam as músicas certas. Os olhos não acompanham."*
 
 ---
 
 **5. Equilíbrio — "O Pastor"**
 Condição: `Fe` entre 45–75 + `Karma > −3` (todos os outros casos)
 
-> *"Seu povo floresce. A fé os guia sem consumir. Você aprendeu o peso de ser necessário sem ser indispensável."*
+> *"Eles acordam. Fizeram filhos, enterraram os mortos. Ainda acendem a vela. Não perguntam mais por você."*
 
 ---
 
