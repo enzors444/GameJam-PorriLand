@@ -10075,22 +10075,14 @@
 											}
 										},
 										{
-											"id": "pick-by-comparison",
-											"objectClass": "System",
+											"id": "pick-nearestfurthest",
+											"objectClass": "Porri_Adepto",
 											"sid": 998291389101802,
 											"parameters": {
-												"object": "Porri_Adepto",
-												"expression": "Porri_Adepto.Felicidade",
-												"comparison": 3,
-												"value": "min(Porri_Adepto.Felicidade)"
-											}
-										},
-										{
-											"id": "pick-random-instance",
-											"objectClass": "System",
-											"sid": 998291389101803,
-											"parameters": {
-												"object": "Porri_Adepto"
+												"which": "nearest",
+												"x": "Raio.X",
+												"y": "Raio.Y",
+												"pick-all-tied": false
 											}
 										}
 									],
@@ -10098,7 +10090,7 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 998291389101804,
+											"sid": 998291389101803,
 											"parameters": {
 												"object-to-create": "Porri_Cetico",
 												"layer": "1",
@@ -10111,7 +10103,7 @@
 										{
 											"id": "destroy",
 											"objectClass": "Porri_Adepto",
-											"sid": 998291389101805,
+											"sid": 998291389101804,
 											"parameters": {}
 										}
 									],
