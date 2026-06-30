@@ -9239,6 +9239,21 @@
 										"instance-variable": "cd",
 										"value": "btn_Poderes.cdMax"
 									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 998291389101700,
+									"parameters": {
+										"variable": "Poder_Selecionado",
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Borda_Poder",
+									"sid": 998291389101701,
+									"parameters": {}
 								}
 							],
 							"sid": 542131957307785,
@@ -9405,6 +9420,21 @@
 										"type": "once",
 										"tag": "\"VFX\""
 									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 998291389101702,
+									"parameters": {
+										"variable": "Poder_Selecionado",
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Borda_Poder",
+									"sid": 998291389101703,
+									"parameters": {}
 								}
 							],
 							"sid": 892277657956981,
@@ -9615,6 +9645,21 @@
 										"instance-variable": "cd",
 										"value": "btn_Poderes.cdMax"
 									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 998291389101704,
+									"parameters": {
+										"variable": "Poder_Selecionado",
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Borda_Poder",
+									"sid": 998291389101705,
+									"parameters": {}
 								}
 							],
 							"sid": 541752238109607
@@ -9692,6 +9737,21 @@
 										"instance-variable": "cd",
 										"value": "btn_Poderes.cdMax"
 									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 998291389101706,
+									"parameters": {
+										"variable": "Poder_Selecionado",
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Borda_Poder",
+									"sid": 998291389101707,
+									"parameters": {}
 								}
 							],
 							"sid": 990000000000040
@@ -12696,6 +12756,21 @@
 								"variable": "Raio_Nunca_Adepto",
 								"value": "0"
 							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 998291389101708,
+							"parameters": {
+								"variable": "Poder_Selecionado",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Borda_Poder",
+							"sid": 998291389101709,
+							"parameters": {}
 						}
 					],
 					"sid": 582293603141290
@@ -12892,6 +12967,21 @@
 								"type": "once",
 								"tag": "\"Dilema\""
 							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 998291389101710,
+							"parameters": {
+								"variable": "Poder_Selecionado",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Borda_Poder",
+							"sid": 998291389101711,
+							"parameters": {}
 						}
 					],
 					"sid": 102227228412925
