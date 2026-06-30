@@ -7376,7 +7376,7 @@
           "eventType": "variable",
           "name": "Poderes_Animacoes",
           "type": "string",
-          "initialValue": "Relampago|Sussurro",
+          "initialValue": "Relampago|Bencao|Sussurro",
           "comment": "Lista de animacoes dos botoes. Adicionar novas na mesma ordem.",
           "isStatic": false,
           "isConstant": false,
@@ -7386,7 +7386,7 @@
           "eventType": "variable",
           "name": "Poderes_IDs",
           "type": "string",
-          "initialValue": "Raio|Sussurro",
+          "initialValue": "Raio|Bencao|Sussurro",
           "comment": "Lista de ids usados na logica dos poderes.",
           "isStatic": false,
           "isConstant": false,
@@ -7396,7 +7396,7 @@
           "eventType": "variable",
           "name": "Poderes_Eras",
           "type": "string",
-          "initialValue": "1|1",
+          "initialValue": "1|1|2",
           "comment": "Era minima de cada poder. Ex: 1|1|2|2|2",
           "isStatic": false,
           "isConstant": false,
@@ -7406,7 +7406,7 @@
           "eventType": "variable",
           "name": "Poderes_Cooldowns",
           "type": "string",
-          "initialValue": "4|7",
+          "initialValue": "4|8|7",
           "comment": "Cooldown de cada poder na mesma ordem.",
           "isStatic": false,
           "isConstant": false,
@@ -8733,6 +8733,83 @@
                 }
               ],
               "sid": 541752238109607
+            },
+            {
+              "eventType": "block",
+              "conditions": [
+                {
+                  "id": "on-object-clicked",
+                  "objectClass": "Mouse",
+                  "sid": 990000000000041,
+                  "parameters": {
+                    "mouse-button": "left",
+                    "click-type": "clicked",
+                    "object-clicked": "Porri_Adepto"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000042,
+                  "parameters": {
+                    "first-value": "Poder_Selecionado",
+                    "comparison": 0,
+                    "second-value": "\"Bencao\""
+                  }
+                },
+                {
+                  "id": "pick-by-comparison",
+                  "objectClass": "System",
+                  "sid": 990000000000045,
+                  "parameters": {
+                    "object": "btn_Poderes",
+                    "expression": "btn_Poderes.idPoder",
+                    "comparison": 0,
+                    "value": "Poder_Selecionado"
+                  }
+                },
+                {
+                  "id": "compare-instance-variable",
+                  "objectClass": "btn_Poderes",
+                  "sid": 990000000000046,
+                  "parameters": {
+                    "instance-variable": "cd",
+                    "comparison": 3,
+                    "value": "0"
+                  }
+                },
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000047,
+                  "parameters": {
+                    "first-value": "Era",
+                    "comparison": 5,
+                    "second-value": "btn_Poderes.eraDesbloqueio"
+                  }
+                }
+              ],
+              "actions": [
+                {
+                  "id": "set-instvar-value",
+                  "objectClass": "Porri_Adepto",
+                  "sid": 990000000000043,
+                  "parameters": {
+                    "instance-variable": "Felicidade",
+                    "value": "min(100, Porri_Adepto.Felicidade + 25)"
+                  }
+                },
+                {
+                  "id": "set-instvar-value",
+                  "objectClass": "btn_Poderes",
+                  "sid": 990000000000044,
+                  "parameters": {
+                    "instance-variable": "cd",
+                    "value": "btn_Poderes.cdMax"
+                  }
+                }
+              ],
+              "sid": 990000000000040
             },
             {
               "eventType": "block",
