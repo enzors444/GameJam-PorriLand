@@ -10291,7 +10291,7 @@
               "sid": 444544813994947,
               "parameters": {
                 "variable": "Dilema_Tipo",
-                "value": "Porri_Adepto.Count < 2 ? \"Festa_Esperanca\" : choose(\"Festa_Esperanca\", \"Justica_Vizinho\", \"Voz_Acalma\", \"Herege\")"
+                "value": "Porri_Adepto.Count < 2 ? \"Festa_Esperanca\" : (Martírio_Ocorreu = 0 ? choose(\"Festa_Esperanca\", \"Justica_Vizinho\", \"Voz_Acalma\", \"Herege\", \"Martírio\") : choose(\"Festa_Esperanca\", \"Justica_Vizinho\", \"Voz_Acalma\", \"Herege\"))"
               }
             },
             {
@@ -10746,6 +10746,48 @@
                 }
               ],
               "sid": 990000000000100
+            },
+            {
+              "eventType": "block",
+              "conditions": [
+                {
+                  "id": "compare-two-values",
+                  "objectClass": "System",
+                  "sid": 990000000000129,
+                  "parameters": {
+                    "first-value": "Dilema_Tipo",
+                    "comparison": 0,
+                    "second-value": "\"Mart\u00edrio\""
+                  }
+                }
+              ],
+              "actions": [
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Titulo",
+                  "sid": 990000000000130,
+                  "parameters": {
+                    "text": "\"MART\u00cdRIO\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Corpo",
+                  "sid": 990000000000131,
+                  "parameters": {
+                    "text": "\"ESTOU PRONTO PARA O MART\u00cdRIO. ABEN\u00c7OAS?\""
+                  }
+                },
+                {
+                  "id": "set-text",
+                  "objectClass": "txt_Dilema_Efeitos",
+                  "sid": 990000000000132,
+                  "parameters": {
+                    "text": "\"SIM: Aceitar (+15 F\u00e9, -1 Adepto)\" & newline & \"N\u00c3O: Proibir (+2 karma, -5 F\u00e9, +15 Felicidade)\""
+                  }
+                }
+              ],
+              "sid": 990000000000128
             }
           ]
         },
@@ -11328,7 +11370,115 @@
                 }
               ],
               "sid": 990000000000105
-            }
+            },
+              {
+                "eventType": "block",
+                "conditions": [
+                  {
+                    "id": "compare-two-values",
+                    "objectClass": "System",
+                    "sid": 990000000000134,
+                    "parameters": {
+                      "first-value": "Dilema_Tipo",
+                      "comparison": 0,
+                      "second-value": "\"Mart\u00edrio\""
+                    }
+                  },
+                  {
+                    "id": "pick-by-comparison",
+                    "objectClass": "System",
+                    "sid": 990000000000135,
+                    "parameters": {
+                      "object": "Porri_Adepto",
+                      "expression": "Porri_Adepto.UID",
+                      "comparison": 0,
+                      "value": "Dilema_Dono_UID"
+                    }
+                  }
+                ],
+                "actions": [
+                  {
+                    "id": "set-eventvar-value",
+                    "objectClass": "System",
+                    "sid": 990000000000136,
+                    "parameters": {
+                      "variable": "Fe",
+                      "value": "min(100, Fe + 15)"
+                    }
+                  },
+                  {
+                    "id": "set-eventvar-value",
+                    "objectClass": "System",
+                    "sid": 990000000000137,
+                    "parameters": {
+                      "variable": "Mortes",
+                      "value": "Mortes + 1"
+                    }
+                  },
+                  {
+                    "id": "set-eventvar-value",
+                    "objectClass": "System",
+                    "sid": 990000000000138,
+                    "parameters": {
+                      "variable": "Karma",
+                      "value": "Era >= 3 ? Karma + 1 : Karma - 1"
+                    }
+                  },
+                  {
+                    "id": "set-eventvar-value",
+                    "objectClass": "System",
+                    "sid": 990000000000139,
+                    "parameters": {
+                      "variable": "Mart\u00edrio_Ocorreu",
+                      "value": "1"
+                    }
+                  },
+                  {
+                    "id": "destroy",
+                    "objectClass": "Porri_Adepto",
+                    "sid": 990000000000140
+                  },
+                  {
+                    "id": "set-eventvar-value",
+                    "objectClass": "System",
+                    "sid": 990000000000141,
+                    "parameters": {
+                      "variable": "Dilema_Tipo",
+                      "value": "\"\""
+                    }
+                  },
+                  {
+                    "id": "set-eventvar-value",
+                    "objectClass": "System",
+                    "sid": 990000000000142,
+                    "parameters": {
+                      "variable": "Dilema_Dono_UID",
+                      "value": "-1"
+                    }
+                  },
+                  {
+                    "id": "set-eventvar-value",
+                    "objectClass": "System",
+                    "sid": 990000000000143,
+                    "parameters": {
+                      "variable": "Dilema_Alvo_UID",
+                      "value": "-1"
+                    }
+                  },
+                  {
+                    "id": "start-timer",
+                    "objectClass": "Controlador",
+                    "sid": 990000000000144,
+                    "behaviorType": "Cron\u00f4metro",
+                    "parameters": {
+                      "duration": "random(90,150)",
+                      "type": "once",
+                      "tag": "\"Dilema\""
+                    }
+                  }
+                ],
+                "sid": 990000000000133
+              }
           ]
         },
         {
@@ -11963,7 +12113,119 @@
                 }
               ],
               "sid": 990000000000109
-            }
+            },
+              {
+                "eventType": "block",
+                "conditions": [
+                  {
+                    "id": "compare-two-values",
+                    "objectClass": "System",
+                    "sid": 990000000000146,
+                    "parameters": {
+                      "first-value": "Dilema_Tipo",
+                      "comparison": 0,
+                      "second-value": "\"Mart\u00edrio\""
+                    }
+                  },
+                  {
+                    "id": "pick-by-comparison",
+                    "objectClass": "System",
+                    "sid": 990000000000147,
+                    "parameters": {
+                      "object": "Porri_Adepto",
+                      "expression": "Porri_Adepto.UID",
+                      "comparison": 0,
+                      "value": "Dilema_Dono_UID"
+                    }
+                  }
+                ],
+                "actions": [
+                  {
+                    "id": "set-eventvar-value",
+                    "objectClass": "System",
+                    "sid": 990000000000148,
+                    "parameters": {
+                      "variable": "Karma",
+                      "value": "Karma + 2"
+                    }
+                  },
+                  {
+                    "id": "set-eventvar-value",
+                    "objectClass": "System",
+                    "sid": 990000000000149,
+                    "parameters": {
+                      "variable": "Fe",
+                      "value": "max(0, Fe - 5)"
+                    }
+                  },
+                  {
+                    "id": "set-eventvar-value",
+                    "objectClass": "System",
+                    "sid": 990000000000150,
+                    "parameters": {
+                      "variable": "Mart\u00edrio_Protegeu",
+                      "value": "1"
+                    }
+                  },
+                  {
+                    "id": "set-eventvar-value",
+                    "objectClass": "System",
+                    "sid": 990000000000151,
+                    "parameters": {
+                      "variable": "Mart\u00edrio_Ocorreu",
+                      "value": "1"
+                    }
+                  },
+                  {
+                    "id": "set-instvar-value",
+                    "objectClass": "Porri_Adepto",
+                    "sid": 990000000000152,
+                    "parameters": {
+                      "instance-variable": "Felicidade",
+                      "value": "min(100, Porri_Adepto.Felicidade + 15)"
+                    }
+                  },
+                  {
+                    "id": "set-eventvar-value",
+                    "objectClass": "System",
+                    "sid": 990000000000153,
+                    "parameters": {
+                      "variable": "Dilema_Tipo",
+                      "value": "\"\""
+                    }
+                  },
+                  {
+                    "id": "set-eventvar-value",
+                    "objectClass": "System",
+                    "sid": 990000000000154,
+                    "parameters": {
+                      "variable": "Dilema_Dono_UID",
+                      "value": "-1"
+                    }
+                  },
+                  {
+                    "id": "set-eventvar-value",
+                    "objectClass": "System",
+                    "sid": 990000000000155,
+                    "parameters": {
+                      "variable": "Dilema_Alvo_UID",
+                      "value": "-1"
+                    }
+                  },
+                  {
+                    "id": "start-timer",
+                    "objectClass": "Controlador",
+                    "sid": 990000000000156,
+                    "behaviorType": "Cron\u00f4metro",
+                    "parameters": {
+                      "duration": "random(90,150)",
+                      "type": "once",
+                      "tag": "\"Dilema\""
+                    }
+                  }
+                ],
+                "sid": 990000000000145
+              }
           ]
         },
         {
